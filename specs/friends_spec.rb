@@ -65,17 +65,22 @@ class TestFriends < MiniTest::Test
 
   end
 
-  def test_name
-    assert_equal("Marc",@person5[:name])
-  end
+  # def test_name
+  #   assert_equal("Marc",@person5[:name])
+  # end
   #For a given person, return their favourite tv show
 
   def test_favourite_tv_show
     assert_equal("Scrubs", favourite_tv_show(@person5))
   end
 
+  #For a given person, check if they like a particular food
 
+def test_likes_food?
+  assert_equal( true, likes_food?(@person3, "stew"))
+  assert_equal( false, likes_food?(@person3, "stewie"))
 
+end
 
 
 

@@ -82,9 +82,14 @@ def test_likes_food?
 
 end
 
+#Allow a new friend to be added to a given person
 
+def test_add_friend
+  add_friend(@person5 , "Bob")
+  assert_equal( "Bob", @person5[:friends].last)
 
 end
+
 
 
 
